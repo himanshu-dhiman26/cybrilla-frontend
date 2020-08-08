@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #2b3636;
 }
 
 code {
@@ -47,4 +48,32 @@ code {
 
 .recovery-input-wrapper .form-group {
   margin: 0;
+}
+
+.title-wrapper {
+  margin: 60px 0px;
+  text-align: center;
+}
+
+.title-wrapper .page-title {
+  font-size: 54px;
+}
+
+.title-wrapper .page-subtitle {
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  .title-wrapper {
+    margin: 30px 0px;
+  }
+
+  .title-wrapper .page-title {
+    font-size: 28px;
+  }
+
+  .title-wrapper .page-subtitle {
+    font-size: 18px;
+  }
 }

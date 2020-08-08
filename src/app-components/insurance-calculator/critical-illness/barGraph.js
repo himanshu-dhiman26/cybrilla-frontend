@@ -9,15 +9,7 @@ function BarGraph() {
   const [costInTenYears, setCostInTenYears] = useState(0);
 
   const formValues = useSelector((state) => state);
-
-  useEffect(() => {
-    const debounceTimer = setTimeout(() => {
-      calculateCosts();
-    }, 3000);
-
-    return () => clearTimeout(debounceTimer);
-  }, [formValues]);
-
+  
   const calculateCosts = () => {
     setCostAsToday(
       formValues.desiredIncome +
@@ -38,12 +30,21 @@ function BarGraph() {
     );
   };
 
+  useEffect(() => {
+    const debounceTimer = setTimeout(() => {
+      calculateCosts();
+    }, 3000);
+
+    return () => clearTimeout(debounceTimer);
+  }, [calculateCosts, formValues]);
+
   const options = {
+    height: 300,
     axisY: {
       gridColor: "#eeeeee",
       lineThickness: 0,
       tickThickness: 0,
-      labelFontSize: 20,
+      labelFontSize: 18,
       interval: 100000,
       labelFormatter: function (e) {
         return "$" + e.value / 1000 + "K";

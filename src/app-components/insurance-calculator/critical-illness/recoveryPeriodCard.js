@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CyInput from "../../../ui-components/input/CyInput";
 import { ReactComponent as InfoIcon } from "../../../assets/svg/info.svg";
 import { useDispatch } from "react-redux";

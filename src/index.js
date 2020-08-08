@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import configureStore from "./redux/store";
 import { Provider } from "react-redux";
+import CriticalIllnessCalculator from "./app-components/insurance-calculator/critical-illness/index";
 
 const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <CriticalIllnessCalculator />
   </Provider>,
   document.getElementById("root")
 );

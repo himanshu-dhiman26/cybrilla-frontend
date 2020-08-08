@@ -39,6 +39,11 @@
   font-weight: 600;
 }
 
+.primary-filled-button:hover {
+  background-color: #037dad;
+  color: #fff;
+}
+
 .insurance-suggestion {
   text-align: center;
   margin: 10px 0px;
@@ -63,4 +68,21 @@
 
 .assumption-title {
   color: #4ab9e2;
+}
+
+@media only screen and (max-width: 600px) {
+  .assumption-text {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .assumption-text-wrapper {
+    padding: 10px 20px;
+  }
+
+  .primary-filled-button {
+    background-color: #49b7e1;
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: 600;
+  }
 }
