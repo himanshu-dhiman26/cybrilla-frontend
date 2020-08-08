@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CanvasJSReact from "../../../assets/canvasjs.react";
+import CanvasJSReact from "../../../assets/canvas-js/canvasjs.react";
 import { useSelector } from "react-redux";
 
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
