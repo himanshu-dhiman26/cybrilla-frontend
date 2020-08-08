@@ -1,37 +1,37 @@
 const INITIAL_STATE = {
-  desiredIncome: 0,
-  homeExpenses: 0,
-  healthcareExpenses: 0,
-  medicalExpenses: 0,
-  otherExpenses: 0,
-  recoveryPeriod: 0
+  desiredIncome: 10000,
+  homeExpenses: 10000,
+  healthcareExpenses: 10000,
+  medicalExpenses: 10000,
+  otherExpenses: 10000,
+  recoveryPeriod: 5,
 };
 
 const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "SET_DESIRED_INCOME":
       return Object.assign({}, state, {
-        desiredIncome: action.value,
+        desiredIncome: parseInt(action.value),
       });
     case "SET_HOME_EXPENSES":
       return Object.assign({}, state, {
-        homeExpenses: action.value,
+        homeExpenses: parseInt(action.value),
       });
     case "SET_HEALTHCARE_EXPENSES":
       return Object.assign({}, state, {
-        healthcareExpenses: action.value,
+        healthcareExpenses: parseInt(action.value),
       });
     case "SET_MEDICAL_EXPENSES":
       return Object.assign({}, state, {
-        medicalExpenses: action.value,
+        medicalExpenses: parseInt(action.value),
       });
     case "SET_OTHER_EXPENSES":
       return Object.assign({}, state, {
-        otherExpenses: action.value,
+        otherExpenses: parseInt(action.value),
       });
     case "SET_RECOVERY_PERIOD":
       return Object.assign({}, state, {
-        recoveryPeriod: action.value,
+        recoveryPeriod: parseInt(action.value),
       });
 
     default:
